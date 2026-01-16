@@ -2,13 +2,22 @@ import {LoginPage} from '../pages/LoginPage';
 import {test,expect} from '../fixtures/baseFixture';
 
 
-test('verify valid login @login @sanity', async ({homePage})=>{
+test('verify valid login @login',
+    {
+        annotation:[
+            {type:'epic',description:'EPIC - 100 - Design login page'},
+            {type:'feature',description:'Login Page Feature'},
+            {type:'story',description:'US 50 - user can login to app'},
+            {type:'severity',description:'Blocker'},
+            {type:''}
+        ]
+    }, async ({homePage})=>{
 
     await expect(homePage.page).toHaveTitle('My Account');
     
 });
 
-test('verify invalid login', async ({page,baseURL})=>{
+test('verify invalid login @login @sanity', async ({page,baseURL})=>{
 
     // AAA
     let loginPage = new LoginPage(page);
