@@ -1,0 +1,27 @@
+{
+  "name": "pwframework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:dev": "npx playwright test --config=playwright.config.dev.ts",
+    "test:qa": "npx playwright test --config=playwright.config.qa.ts",
+    "test:stage": "npx playwright test --config=playwright.config.stage.ts",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.7",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.4"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0"
+  }
+}
