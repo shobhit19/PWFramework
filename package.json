@@ -22,6 +22,8 @@
     "allure-playwright": "^3.4.4"
   },
   "dependencies": {
-    "csv-parse": "^6.1.0"
+    "ajv": "^8.17.1",
+    "csv-parse": "^6.1.0",
+    "jsonpath-plus": "^10.3.0"
   }
 }
